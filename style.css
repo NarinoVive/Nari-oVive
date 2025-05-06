@@ -1,0 +1,287 @@
+body {
+    font-family: 'Segoe UI', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f8f5;
+    color: #2e4a36;
+}
+
+header {
+    background-color: #2e8b57;
+    color: white;
+    padding: 30px 20px;
+    text-align: center;
+}
+
+nav {
+    background-color: #3cb371;
+    display: flex;
+    justify-content: center;
+    padding: 15px 0;
+}
+
+nav a {
+    color: white;
+    margin: 0 20px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+section {
+    padding: 40px 20px;
+}
+
+h2 {
+    color: #006400;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+h3 {
+    color: #228b22;
+}
+
+.destino {
+    background-color: white;
+    border-radius: 10px;
+    margin-bottom: 40px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.destino img, .destino video {
+    width: 100%;
+    max-height: 300px;
+    object-fit: cover;
+    margin-top: 10px;
+    border-radius: 10px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+table, th, td {
+    border: 1px solid #3cb371;
+}
+
+th, td {
+    padding: 15px;
+    text-align: center;
+}
+
+footer {
+    background-color: #2e8b57;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+    }
+    nav a {
+        margin: 10px 0;
+    }
+}
+
+.tabla-tarifas {
+    display: flex;
+    justify-content: center;
+    margin: 30px 0;
+}
+
+table {
+    width: 80%;
+    border-collapse: collapse;
+    background: #ffffffcc;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+thead {
+    background-color: #4CAF50;
+    color: white;
+    font-size: 20px;
+}
+
+th, td {
+    padding: 15px;
+    text-align: center;
+    font-size: 18px;
+}
+
+tbody tr {
+    transition: background 0.3s ease;
+}
+
+tbody tr:hover {
+    background-color: #d0f0c0;
+}
+
+.galeria {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+
+.galeria-item {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    overflow: hidden;
+    /* Elimina cualquier altura fija */
+    height: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.galeria-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.3);
+}
+
+.galeria-item img, 
+.galeria-item video {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    border-bottom: 1px solid #ccc;
+}
+
+.galeria-item p {
+    margin: 10px 0 0;
+    font-weight: bold;
+    color: #2e4a36;
+    font-size: 16px;
+}
+/* Galería tipo cuadrícula */
+.galeria {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.galeria-item {
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    transition: transform 0.3s;
+}
+
+.galeria-item:hover {
+    transform: scale(1.05);
+}
+
+/* Miniaturas */
+.galeria-img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+    border-radius: 10px;
+}
+
+/* Popup oculto */
+.popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.9);
+    text-align: center;
+    padding-top: 50px;
+    z-index: 1000;
+}
+
+/* Imagen grande */
+.popup img {
+    max-width: 90%;
+    max-height: 80%;
+    border-radius: 10px;
+}
+
+/* Botón de cerrar */
+.cerrar {
+    position: absolute;
+    top: 20px;
+    right: 40px;
+    font-size: 50px;
+    color: white;
+    text-decoration: none;
+}
+
+/* Mostrar popup */
+.popup:target {
+    display: block;
+}
+
+.galeria-img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    display: block;
+    border-radius: 10px;
+}
+
+#comentarios {
+    margin: 40px auto;
+    max-width: 600px;
+    padding: 20px;
+    background: #f5fff5;
+    border-radius: 10px;
+    box-shadow: 0 0 8px rgba(0,0,0,0.1);
+}
+
+#form-comentario input,
+#form-comentario textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#form-comentario button {
+    background: #0e735d;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#lista-comentarios {
+    margin-top: 20px;
+}
+
+.comentario {
+    background: white;
+    padding: 15px;
+    border-left: 4px solid #0e735d;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+.logo {
+    width: 130px;
+    height: 130px;
+}
+
+
+
+
